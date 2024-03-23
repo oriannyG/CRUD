@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Edit post</h1>
+    <form method="post">{% csrf_token %}
+        <p>estas seguro de borrar {{ publication.title }} ? </p>
+        {{ form.as_p }}
+        <button type="delete">delete</button>
+    </form>
+{% endblock content %}
